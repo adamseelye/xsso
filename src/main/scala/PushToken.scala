@@ -21,8 +21,12 @@ object PushToken {
 
       // Insert secret key and jwt
       val genToken = new GenerateToken
-      val secretKey = genToken.secretKey
-      println(secretKey.mkString("Array(", ", ", ")"))
+      val secretKey = genToken.encodedKey
+      val jwt = genToken.jwt
+
+      println(jwt)
+      println(secretKey)
+
     } catch {
       case e: Exception => println("Error reading secret key")
     }
