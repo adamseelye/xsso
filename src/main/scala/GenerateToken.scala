@@ -7,7 +7,7 @@ import java.util.Base64
 class GenerateToken {
 
     val claim: JwtClaim = JwtClaim(
-      content = """{user":"Username"}""",
+      content = """{"user":"UsernameTest"}""",
       issuer = Some("xsso"),
       expiration = Some(Instant.now.getEpochSecond + 3600)
     )
